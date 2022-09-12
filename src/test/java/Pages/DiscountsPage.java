@@ -2,7 +2,9 @@ package Pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import java.time.Duration;
 
@@ -21,11 +23,17 @@ public class DiscountsPage {
     }
 
     public void discounts() {
+
         driver.findElement(promotions).click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[contains(text(), 'Discounts')]")));
         driver.findElement(By.xpath("//*[contains(text(), 'Discounts')]")).click();
         driver.findElement(addNew).click();
         driver.findElement(name).sendKeys("test");
         driver.findElement(saveButton).click();
+
+        boolean isResultDisplayed = driver.findElement(By.xpath(("//*[contains(text(),'test')]"))).isDisplayed();
+        Assert.assertTrue(isResultDisplayed, "Discount is not added");
+
         driver.findElement(logoutButton).click();
     }
 
