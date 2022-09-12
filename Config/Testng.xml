@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Nop Commerce">
+
+    <test name="Verify user is logged in">
+        <parameter name="browserName" value="chrome"></parameter>
+        <classes>
+            <class name="Test.LoginPageTest"/>
+        </classes>
+    </test>
+
+</suite>
