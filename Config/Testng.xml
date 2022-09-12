@@ -16,4 +16,11 @@
         </classes>
     </test>
 
+    <test name="Verify user can add new campaigns">
+        <parameter name="browserName" value="chrome"></parameter>
+        <classes>
+            <class name="Test.VerifyUserCanAddNewCampaign"/>
+        </classes>
+    </test>
+
 </suite>
