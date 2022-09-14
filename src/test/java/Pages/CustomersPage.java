@@ -31,10 +31,8 @@ public class CustomersPage {
         driver.findElement(customerDropdown).click();
         driver.findElement(email).sendKeys(mail);
         driver.findElement(searchButton).click();
-
         boolean isResultDisplayed = driver.findElement(verifySearch).isDisplayed();
         Assert.assertTrue(isResultDisplayed, "Unable to search customers");
-
         driver.findElement(logoutButton).click();
     }
 }

@@ -39,10 +39,8 @@ public class CampaignsPage {
         driver.findElement(subject).sendKeys(campaignSubject);
         driver.findElement(body).sendKeys(campaignBody);
         driver.findElement(saveButton).click();
-
         boolean isResultDisplayed = driver.findElement(verifyCampaign).isDisplayed();
         Assert.assertTrue(isResultDisplayed, "Campaign is not added");
-
         driver.findElement(logoutButton).click();
     }
 }
