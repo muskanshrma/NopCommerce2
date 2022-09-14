@@ -1,16 +1,16 @@
 package Test;
 
 import org.testng.annotations.Test;
+import java.io.IOException;
 
 public class VerifyUserCanAddNewDiscount extends BaseClass {
-    @Test(priority = 1)
-    public void login() {
+    @Test
+    public void login() throws IOException {
         pageFactory.getLoginPage().login();
     }
 
-    @Test(priority = 2)
+    @Test(dependsOnMethods = "login")
     public void discounts() {
         pageFactory.getDiscountsPage().discounts();
     }
 }
-

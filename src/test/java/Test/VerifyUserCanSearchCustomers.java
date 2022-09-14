@@ -3,14 +3,14 @@ package Test;
 import org.testng.annotations.Test;
 import java.io.IOException;
 
-public class VerifyUserCanAddNewCampaign extends BaseClass{
+public class VerifyUserCanSearchCustomers extends BaseClass{
     @Test
     public void login() throws IOException {
         pageFactory.getLoginPage().login();
     }
 
     @Test(dependsOnMethods = "login")
-    public void campaigns() {
-        pageFactory.getCampaignsPage().campaigns();
+    public void customers() {
+        pageFactory.getCustomersPage().customers();
     }
 }
