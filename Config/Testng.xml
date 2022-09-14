@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Nop Commerce">
+    <listeners>
+        <listener class-name="Reports.Listeners"/>
+    </listeners>
 
     <test name="Verify user is logged in">
         <parameter name="browserName" value="chrome"></parameter>
@@ -9,4 +12,31 @@
         </classes>
     </test>
 
+    <test name="Verify user can add new discount">
+        <parameter name="browserName" value="chrome"></parameter>
+        <classes>
+            <class name="Test.VerifyUserCanAddNewDiscount"/>
+        </classes>
+    </test>
+
+    <test name="Verify user can add new campaigns">
+        <parameter name="browserName" value="chrome"></parameter>
+        <classes>
+            <class name="Test.VerifyUserCanAddNewCampaign"/>
+        </classes>
+    </test>
+
+    <test name="Verify user can search customer">
+        <parameter name="browserName" value="chrome"></parameter>
+        <classes>
+            <class name="Test.VerifyUserCanSearchCustomers"/>
+        </classes>
+    </test>
+
+    <test name="Verify user can search Vendors">
+        <parameter name="browserName" value="chrome"></parameter>
+        <classes>
+            <class name="Test.VerifyUserCanSearchVendors"/>
+        </classes>
+    </test>
 </suite>
