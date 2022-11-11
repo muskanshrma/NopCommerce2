@@ -10,6 +10,7 @@ public class PageFactory {
     private CampaignsPage campaignsPage;
     private CustomersPage customersPage;
     private VendorsPage vendorsPage;
+    private TemplatesPage templatesPage;
 
     public PageFactory(WebDriver driver) {
         this.driver = driver;
@@ -48,5 +49,11 @@ public class PageFactory {
             vendorsPage = new VendorsPage(driver);
         }
         return vendorsPage;
+    }
+    public TemplatesPage getTemplatesPage() {
+        if (templatesPage == null) {
+            templatesPage = new TemplatesPage(driver);
+        }
+        return templatesPage;
     }
 }

@@ -21,7 +21,8 @@ public class CampaignsPage {
     By name = By.xpath("//input[@name='Name']");
     By subject = By.xpath("//input[@name='Subject']");
     By body = By.xpath("//textarea[@name='Body']");
-    By saveButton = By.xpath("//button[@name='save']");
+//    By saveButton = By.xpath("//button[@name='save']");
+    By saveButton = By.xpath("//button");
     By verifyCampaign = By.xpath("//td[contains(text(),'campaign 1')]");
     By logoutButton = By.xpath("//a[contains(text(), 'Logout')]");
 

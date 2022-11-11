@@ -2,6 +2,7 @@ package Pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -28,14 +29,14 @@ public class VendorsPage {
     }
 
     public void vendors() {
-        driver.findElement(customers).click();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(vendor));
-        driver.findElement(vendor).click();
-        driver.findElement(vendorName).sendKeys(name);
-        driver.findElement(email).sendKeys(mail);
-        driver.findElement(searchButton).click();
-        boolean isResultDisplayed = driver.findElement(verifySearch).isDisplayed();
-        Assert.assertTrue(isResultDisplayed, "Unable to search customers");
-        driver.findElement(logoutButton).click();
-    }
+            driver.findElement(customers).click();
+            wait.until(ExpectedConditions.visibilityOfElementLocated(vendor));
+            driver.findElement(vendor).click();
+            driver.findElement(vendorName).sendKeys(name);
+            driver.findElement(email).sendKeys(mail);
+            driver.findElement(searchButton).click();
+            boolean isResultDisplayed = driver.findElement(verifySearch).isDisplayed();
+            Assert.assertTrue(isResultDisplayed, "Unable to search customers");
+            driver.findElement(logoutButton).click();
+        }
 }

@@ -1,5 +1,6 @@
 package Reports;
 
+import Test.BaseClass;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
@@ -8,7 +9,7 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-public class Listeners implements ITestListener {
+public class Listeners extends BaseClass implements ITestListener {
 
     ExtentReports extent = ExtentReport.extentReportGenerator();
     ExtentTest test;
@@ -28,6 +29,8 @@ public class Listeners implements ITestListener {
 
     public void onTestFailure(ITestResult result) {
         test.fail(result.getThrowable());
+        System.out.println("Failed Test");
+        failed();
     }
 
     public void onTestSkipped(ITestResult result) {

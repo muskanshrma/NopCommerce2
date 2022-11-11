@@ -14,7 +14,8 @@ public class DiscountsPage {
 
     By promotions = By.xpath("//p[contains(text(), 'Promotions')]");
     By discounts = By.xpath("//a[contains(@class,'nav-link')]//p[contains(text(),'Discounts')]");
-    By addNew = By.xpath("//a[contains(@class, 'btn-primary')]");
+//    By addNew = By.xpath("//a[contains(@class, 'btn-primary')]");
+    By addNew = By.xpath("//a");
     By name = By.xpath("//input[@name='Name']");
     By saveButton = By.xpath("//button[@name='save']");
     By logoutButton = By.xpath("//a[contains(text(), 'Logout')]");

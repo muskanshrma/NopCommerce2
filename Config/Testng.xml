@@ -39,4 +39,10 @@
             <class name="Test.VerifyUserCanSearchVendors"/>
         </classes>
     </test>
+        <test name="Verify user can add and delete vendors">
+            <parameter name="browserName" value="chrome"></parameter>
+            <classes>
+                <class name="Test.VerifyUserCanSearchVendors"/>
+            </classes>
+        </test>
 </suite>
